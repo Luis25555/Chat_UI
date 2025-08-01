@@ -6,11 +6,11 @@ import Sidebar from './components/sider'
 
 function App() {
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen w-screen ">
       <Sidebar />
       <div className="flex-1 bg-gray-100 p-4">
         {/* Other components will go here */}
-        <h1 className="text-xl font-bold">Welcome to Chat UI</h1>
+        <h1 className="text-xl text-gray-300 font-bold ">Welcome to Chat UI</h1>
       </div>
     </div>
   );
