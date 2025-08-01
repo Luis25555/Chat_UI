@@ -19,8 +19,8 @@ export default function Groups() {
   }, []);
 
   return (
-      <div className="bg-white shadow-md rounded-md px-4 py-4 w-[280px] mt-2 text-black">
-      <div className="flex justify-between items-center mb-4">
+      <div className="bg-white shadow-md rounded-md px-4 py-1 w-[280px]  text-black">
+      <div className="flex justify-between items-center mb-1">
         <h2 className="text-lg font-semibold">
           Groups <span className="text-sm text-gray-600">({group.length})</span>
         </h2>
@@ -29,7 +29,7 @@ export default function Groups() {
       {group.length === 0 ? (
         <p>No group loaded</p>
       ) : (
-        <ul className="space-y-2">
+        <ul className="space-y-1">
           {group.map((group) => (
            <li
               key={group.name}
