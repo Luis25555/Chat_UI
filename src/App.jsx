@@ -5,6 +5,7 @@ import './App.css'
 import Sider from './components/sider'
 import ChatList from './components/ChatList'
 import Header from './components/Header'
+import Groups  from './components/Groups'
 function App() {
   return (
     <div>
@@ -16,7 +17,12 @@ function App() {
      
       <div className="pl-20 p-4">
         <ChatList />
-      </div>
+
+
+  <Groups/>
+</div>
+        
+      
     </div>
     </div>
   );

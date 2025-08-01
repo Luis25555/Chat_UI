@@ -26,7 +26,7 @@ export default function ChatList() {
 
     
 
-    <div className=" bg-white shadow-md rounded-md p-4  w-fit text-black">
+    <div className=" bg-white shadow-md rounded-md p-4   w-[280px] text-black">
         
         <input type="text" placeholder="Search Contact"
         value={searchTerm}
@@ -48,7 +48,7 @@ export default function ChatList() {
           ))}
         </ul>
       )}
-<div className="flex space-x-2 mt-4">
+<div className="flex space-x-3 mt-4 justify-center">
   <button type="button" className="!bg-purple-800 !text-white !px-4 !py-2 !rounded-md hover:!bg-purple-700"> Meeting </button>
   <button type="button" className="!bg-gray-100 hover:!bg-gray-200 text-black px-4 py-2 rounded-md " > Schedule </button>
 </div>
