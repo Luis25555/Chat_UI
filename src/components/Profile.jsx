@@ -9,7 +9,7 @@ import { CiImageOn } from "react-icons/ci";
 
 
 
-export default function Profile({ userId }) {
+export default function Profile({ userId, showMobileProfile, onCloseProfile }) {
   const [user, setUser] = useState(null);
   const [userGroups, setUserGroups] = useState([]);
   useEffect(() => {
@@ -55,11 +55,27 @@ export default function Profile({ userId }) {
     );
   }
 
+if (window.innerWidth <= 768 && !showMobileProfile) {
+  return null;
+}
   
 
   return (
- <div className="w-[300px] h-full bg-white shadow-lg text-black p-4 flex flex-col items-center relative overflow-hidden rounded-2xl">
+ <div
+  className={`bg-white text-black p-4 rounded-2xl shadow-lg w-[300px] relative overflow-auto
+    ${typeof window !== "undefined" && window.innerWidth <= 768 
+      ? 'fixed top-0 left-0 w-full h-full z-50' 
+      : 'h-[calc(100vh-2rem)] max-h-screen'}
+  `}
+>
   
+  <button
+    onClick={onCloseProfile}
+    className=" absolute top-3 left-3 w-9 h-9 flex items-center justify-center text-2xl text-red-500  !rounded-full z-50 !bg-transparent !border-0  hover:!border-0 "
+  >
+    &times;
+  </button>
+
   <div className="relative w-full flex justify-center mb-6">
     <img
       src={user.profileImage || "/photos/default.png"}
