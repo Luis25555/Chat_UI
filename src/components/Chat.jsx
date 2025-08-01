@@ -92,9 +92,9 @@ const handleSendMessage = async (e) => {
 //rendering starts here
   return (
     //chat header block
-    <div className="bg-white shadow-md rounded-md p-4 flex flex-col max-h-[93%] h-[93%] ">
+    <div className="bg-white shadow-md rounded-md p-4 flex flex-col max-h-[93%] h-[93%]  ">
       {selectedUser && (
-  <div className="flex justify-between items-center mb-4 bg-purple-100">
+  <div className="  flex justify-between items-center mb-4 bg-purple-100 ">
   {/* Left: User Info */}
   {selectedUser && (
     <div className="flex items-center gap-4 ">
@@ -149,7 +149,7 @@ const handleSendMessage = async (e) => {
 )}
 
       {/* Messages */}
-<div className="flex-1 overflow-y-auto space-y-4">
+<div className="flex-1 overflow-y-auto space-y-4 no-scrollbar">
   {messages.map((msg) => {
     const isMe = msg.fromUser === currentUserId;
     const user = selectedUser; // Assuming `users` is loaded from API
@@ -192,7 +192,7 @@ const handleSendMessage = async (e) => {
                 : 'bg-gray-300 text-black rounded-bl-none'
             }`}
           >
-            <div className="break-words whitespace-pre-wrap">
+            <div className="break-words whitespace-pre-wrap ">
               {typeof msg.message === "string" && msg.message.trim() !== "" && (
                 <p>{msg.message}</p>
               )}
